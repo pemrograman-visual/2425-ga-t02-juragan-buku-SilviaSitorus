@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="T02"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-27 11:42:47 AM"/>
+        <attribute name="created" value="VXNlcjtMQVBUT1AtVFFORDlLUEM7MjAyNC0wOS0yNzsxMDowOToyMiBBTTsyNzgz"/>
+        <attribute name="edited" value="VXNlcjtMQVBUT1AtVFFORDlLUEM7MjAyNC0wOS0yNzsxMTo0Mjo0NyBBTTszOzI4OTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ISBN, judul, penulis, keterangan" type="String" array="False" size=""/>
+            <input variable="ISBN"/>
+            <input variable="judul"/>
+            <input variable="penulis"/>
+            <declare name="tahun" type="Integer" array="False" size=""/>
+            <input variable="tahun"/>
+            <declare name="penerbit" type="String" array="False" size=""/>
+            <input variable="penerbit"/>
+            <declare name="format" type="String" array="False" size=""/>
+            <input variable="format"/>
+            <declare name="harga, margin" type="Real" array="False" size=""/>
+            <input variable="harga"/>
+            <input variable="margin"/>
+            <declare name="stock" type="Integer" array="False" size=""/>
+            <input variable="stock"/>
+            <declare name="rating" type="Real" array="False" size=""/>
+            <input variable="rating"/>
+            <if expression="rating&gt;=4.7">
+                <then>
+                    <assign variable="keterangan" expression="&quot;Best Pick&quot;"/>
+                </then>
+                <else>
+                    <if expression="rating&gt;=4.5">
+                        <then>
+                            <assign variable="keterangan" expression="&quot;Must Read&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="rating&gt;=4.0">
+                                <then>
+                                    <assign variable="keterangan" expression="&quot;Recommended&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="rating&gt;=3.0">
+                                        <then>
+                                            <assign variable="keterangan" expression="&quot;Average&quot;"/>
+                                        </then>
+                                        <else>
+                                            <if expression="rating&lt;3.0">
+                                                <then>
+                                                    <assign variable="keterangan" expression="&quot;Low&quot;"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="ISBN &amp;&quot;|&quot;&amp; judul &amp;&quot;|&quot;&amp; penulis &amp;&quot;|&quot;&amp; tahun &amp;&quot;|&quot;&amp; penerbit &amp;&quot;|&quot;&amp; format &amp;&quot;|&quot;&amp; tofixed(harga,2) &amp;&quot;|&quot;&amp; tofixed(margin,2) &amp;&quot;|&quot;&amp; stock &amp;&quot;|&quot;&amp; tofixed(rating,1) &amp;&quot;|&quot;&amp; keterangan" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
