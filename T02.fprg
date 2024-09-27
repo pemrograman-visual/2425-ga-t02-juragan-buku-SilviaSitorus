@@ -4,9 +4,9 @@
         <attribute name="name" value="T02"/>
         <attribute name="authors" value="User"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-09-27 11:42:47 AM"/>
+        <attribute name="saved" value="2024-09-27 11:50:41 AM"/>
         <attribute name="created" value="VXNlcjtMQVBUT1AtVFFORDlLUEM7MjAyNC0wOS0yNzsxMDowOToyMiBBTTsyNzgz"/>
-        <attribute name="edited" value="VXNlcjtMQVBUT1AtVFFORDlLUEM7MjAyNC0wOS0yNzsxMTo0Mjo0NyBBTTszOzI4OTg="/>
+        <attribute name="edited" value="VXNlcjtMQVBUT1AtVFFORDlLUEM7MjAyNC0wOS0yNzsxMTo1MDo0MSBBTTs0OzI4OTI="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -28,6 +28,7 @@
             <input variable="stock"/>
             <declare name="rating" type="Real" array="False" size=""/>
             <input variable="rating"/>
+            <assign variable="keterangan" expression="&quot;&quot;"/>
             <if expression="rating&gt;=4.7">
                 <then>
                     <assign variable="keterangan" expression="&quot;Best Pick&quot;"/>

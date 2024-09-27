@@ -32,6 +32,7 @@ public class T02 {
         double rating;
 
         rating = Double.parseDouble(input.nextLine());
+        keterangan = "";
         if (rating >= 4.7) {
             keterangan = "Best Pick";
         } else {
@@ -58,4 +59,3 @@ public class T02 {
         return String.format("%." + digits + "f", value);
     }
 }
-
